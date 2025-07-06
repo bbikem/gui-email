@@ -1,0 +1,102 @@
+Google AppSheet
+1. Giới thiệu về Google AppSheet
+Google AppSheet là một nền tảng phát triển ứng dụng no-code (không cần viết mã) do Google cung cấp, cho phép người dùng tạo các ứng dụng web và di động một cách nhanh chóng từ các nguồn dữ liệu như Google Sheets, Excel, SQL, và các dịch vụ đám mây khác (Google Drive, Dropbox, Salesforce,...).
+
+2. Tính năng nổi bật
+- Không cần viết mã (No-code):
++ Người dùng không cần có kiến thức lập trình để tạo ứng dụng.
++ Giao diện kéo-thả, cấu hình đơn giản.
+- Kết nối dữ liệu dễ dàng:
+Hỗ trợ nhiều nguồn dữ liệu như:
++ Google Sheets
++ Microsoft Excel
++ SQL Database
++ Cloud Storage APIs
+- Tự động hóa (Automation):
++ Tạo workflow, gửi email, thông báo đẩy, cập nhật dữ liệu tự động.
+- Ứng dụng đa nền tảng:
++ Tự động tương thích với cả trình duyệt web và thiết bị di động (Android, iOS).
+- Tính năng tích hợp sẵn:
++ Quản lý người dùng, phân quyền truy cập.
++ Chụp ảnh, GPS, quét mã QR, biểu mẫu nhập liệu.
++ Biểu đồ, bảng thống kê, báo cáo.
+- Bảo mật và triển khai:
++ Tích hợp với Google Workspace để kiểm soát người dùng.
++ Có thể triển khai nội bộ hoặc công khai.
+
+3. Giới hạn
+3.1. Giới hạn về dữ liệu (Data limits: 5Mb-10Mb)
+| Loại giới hạn                    | Miễn phí / Pro / Enterprise                                 |
+| -------------------------------- | ----------------------------------------------------------- |
+| **Số dòng dữ liệu tối đa**       | \~10.000 dòng/sheet (khuyến nghị), tối đa \~50.000 dòng/app |
+| **Số bảng dữ liệu**              | Không giới hạn, nhưng hiệu năng giảm khi > 20 bảng          |
+| **Số bản ghi hiển thị tốt nhất** | Tốt nhất < 5.000 dòng cho hiệu năng mượt mà                 |
+| **Dung lượng ảnh/tệp đính kèm**  | Mặc định dùng Google Drive (theo quota tài khoản)           |
+=> AppSheet không phù hợp cho dữ liệu real-time lớn hoặc thao tác đồng thời hàng ngàn dòng.
+3.2. Giới hạn về giao diện và tính năng
+| Hạn chế                                               | Chi tiết                                  |
+| ----------------------------------------------------- | ----------------------------------------- |
+| Không tùy biến giao diện nâng cao                     | Không hỗ trợ HTML/CSS/JS trực tiếp        |
+| Không có animation phức tạp                           | UI chủ yếu là form/table/card/basic chart |
+| Không làm game/ứng dụng đồ họa                        | Chỉ phù hợp với nghiệp vụ và quản lý      |
+| Không offline 100% (trừ khi bật chế độ "Offline Use") | Cần mạng để đồng bộ dữ liệu thường xuyên  |
+3.3. Giới hạn về người dùng & bảo mật
+| Hạng mục                          | Miễn phí / Pro / Enterprise              |
+| --------------------------------- | ---------------------------------------- |
+| **Số người dùng miễn phí**        | 1 người (chỉ dành cho cá nhân)           |
+| **Tính năng xác thực người dùng** | Chỉ có ở gói trả phí (qua email, domain) |
+| **Kiểm soát phân quyền nâng cao** | Cần gói Business / Enterprise            |
+3.4. Giới hạn theo gói sử dụng
+| Gói sử dụng    | Tính năng chính                              | Giá (tham khảo)   |
+| -------------- | -------------------------------------------- | ----------------- |
+| **Free**       | 1 user, test app, không chia sẻ              | Miễn phí          |
+| **Starter**    | Triển khai cho 1 nhóm nhỏ (\~\$5/user/tháng) | Có xác thực       |
+| **Core**       | Workflow, phân quyền, tự động hóa            | \~\$10/user/tháng |
+| **Enterprise** | Kết nối API, BigQuery, SSO, SLA support      | Theo thỏa thuận   |
+=> AppSheet miễn phí để phát triển cá nhân, nhưng để chia sẻ hoặc triển khai nội bộ sẽ cần trả phí tùy gói.
+3.5. Tích hợp và giới hạn API
+| Loại tích hợp               | Có hỗ trợ? | Ghi chú                    |
+| --------------------------- | ---------- | -------------------------- |
+| Google Sheets, Excel        | Có          | Hỗ trợ tốt                 |
+| SQL Server, MySQL, BigQuery | Có          | Có nhưng cần gói cao hơn   |
+| REST API xuất/nhập          | Có thể         | Có nhưng cấu hình phức tạp |
+| App-to-App Automation       | Có          | Dùng Bots, Workflow        |
+
+4. So sánh AppSheet với các phương pháp lập trình truyền thống
+4.1. So sánh tổng quan
+| Tiêu chí                    | AppSheet (No-Code)                        | Lập trình truyền thống (Frontend + Backend)             |
+| --------------------------- | ----------------------------------------- | ------------------------------------------------------- |
+| **Tốc độ phát triển**       | Rất nhanh, chỉ vài giờ/tối đa vài ngày | Mất nhiều ngày đến vài tuần/tháng                    |
+| **Yêu cầu kỹ thuật**        | Không cần code                            | Cần biết HTML/CSS/JS, Python/Node/Java/PHP/...          |
+| **Tuỳ biến giao diện**      | Giới hạn (giao diện mặc định)             | Rất linh hoạt, có thể làm bất kỳ UI nào                 |
+| **Kết nối dữ liệu**         | Tốt với Google Sheets, Excel, SQL         | Tuỳ lập trình viên – có thể kết nối bất cứ hệ thống nào |
+| **Chạy trên nền tảng nào**  | Web + Mobile (tự động)                    | Cần lập trình riêng web/mobile nếu muốn                 |
+| **Phân quyền người dùng**   | Có (ở gói trả phí)                        | Tùy lập trình viên xây dựng                             |
+| **Chi phí vận hành**        | Có thể thấp nếu gói thấp + Google Sheets  | Chi phí hosting, server, bảo trì (tùy quy mô)           |
+| **Bảo mật & mở rộng**       | Tốt ở mức vừa – khó mở rộng hệ thống lớn  | Linh hoạt, có thể scale hệ thống lớn                    |
+| **Tích hợp AI, automation** | Có sẵn bots/AI OCR cơ bản                 | Cần tích hợp thủ công các dịch vụ AI                    |
+4.2. Khi nào nên dùng AppSheet
+| Trường hợp sử dụng                    | AppSheet phù hợp? |
+| ------------------------------------- | ----------------- |
+| Quản lý nội bộ công ty nhỏ/vừa        | Rất phù hợp     |
+| Ứng dụng điểm danh, kho, form         | Phù hợp         |
+| Muốn làm app nhanh mà không biết code | Tối ưu          |
+| Làm MVP (prototype) nhanh             | Tối ưu          |
+| Không có đội ngũ kỹ thuật             | Rất tốt         |
+4.3. Khi nào nên sử dụng Lập trình truyền thống
+| Trường hợp sử dụng                       | Lập trình phù hợp?   |
+| ---------------------------------------- | -------------------- |
+| Ứng dụng phục vụ hàng nghìn người dùng   | Tốt hơn            |
+| Yêu cầu giao diện phức tạp/tuỳ biến cao  | Rất phù hợp        |
+| Tích hợp hệ thống lớn, API phức tạp      | Cần thiết          |
+| Làm hệ thống riêng biệt có logic đặc thù | Cần lập trình viên |
+
+5. Thử nghiệm Quản lý kho
+5.1. Nhập kho
+5.2. Xuất kho
+5.3. Tồn kho
+
+
+
+
+
